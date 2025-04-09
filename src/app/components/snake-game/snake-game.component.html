@@ -1,0 +1,11 @@
+<div style="display: flex; flex-direction: column; width: fit-content">
+  <h2>Snake Game</h2>
+
+  <canvas #gameCanvas width="400" height="400" style="border: 1px solid black">
+  </canvas>
+  <button *ngIf="!startStatus" (click)="startGame()">start</button>
+  <div *ngIf="faildState">
+    <h3 style="color: red">You faild</h3>
+    <button (click)="startGame()">Try again</button>
+  </div>
+</div>
